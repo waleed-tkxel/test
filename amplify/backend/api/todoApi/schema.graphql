@@ -1,0 +1,11 @@
+type Todo @model {
+  id: ID!
+  name: String!
+  description: String
+}
+
+type Book @model {
+  id: ID!
+  title: String!
+  author: String
+}

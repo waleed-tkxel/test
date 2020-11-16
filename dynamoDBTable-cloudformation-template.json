@@ -1,0 +1,30 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+
+  "Description": "This is a test DynamoDB table made using cloud formation through upload file option",
+
+  "Resources": {
+    "WaleedTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [ 
+          { 
+             "AttributeName": "name",
+             "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [ 
+            { 
+              "AttributeName": "name",
+              "KeyType": "HASH"
+            }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": "5",
+          "WriteCapacityUnits": "5"
+        }
+      }
+
+    }
+  }
+}
