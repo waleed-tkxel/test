@@ -2,6 +2,7 @@ type Todo @model {
   id: ID!
   name: String!
   description: String
+  createrName: String
 }
 
 type Book @model {
